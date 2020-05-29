@@ -1,0 +1,60 @@
+@startuml
+Toy <|-- Car
+Toy <|-- Bike
+Toy <|-- Plane
+Car <-- ToyFactory : create
+Bike <-- ToyFactory : create
+Plane <-- ToyFactory : create
+ToyFactory <- Main : calls
+
+class Main {
+  +main()
+}
+
+class ToyFactory {
+  +createToy(enum type)
+}
+
+class Toy {
+ -name
+ -price
+ +prepareParts()
+ +combineParts()
+ +assembleParts()
+ +applyLabel()
+ +showProduct()
+ +getName()
+ +getPrice()
+}
+
+class Car {
+ +prepareParts()
+ +combineParts()
+ +assembleParts()
+ +applyLabel()
+ +showProduct()
+ +getName()
+ +getPrice()
+}
+
+class Bike {
+ +prepareParts()
+ +combineParts()
+ +assembleParts()
+ +applyLabel()
+ +showProduct()
+ +getName()
+ +getPrice()
+}
+
+class Plane {
+ +prepareParts()
+ +combineParts()
+ +assembleParts()
+ +applyLabel()
+ +showProduct()
+ +getName()
+ +getPrice()
+}
+
+@enduml
